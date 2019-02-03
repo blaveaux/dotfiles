@@ -54,11 +54,14 @@ nnoremap <A-8> :let @/="\\<" . expand("<cword>") . "\\>"<CR>
 
 " FZF mappings
 
-" map ctrl+f to open FZF files search
+" map CTRL-f to open FZF files search
 nnoremap <c-f> :Files<CR>
 
 " map <Leader>a to ag search
 nnoremap <Leader>a :Ag<CR>
 
-" map <Leader>a to search tags
+" map <Leader>t to search tags
 nnoremap <Leader>t :Tag<CR>
+
+" map <Leader>b to search buffers
+nnoremap <Leader>b :Buffers<CR>
