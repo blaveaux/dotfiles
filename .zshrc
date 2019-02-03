@@ -32,6 +32,9 @@ sources+="$HOME/.zsh/prompt.zsh"
 # FZF specific configs
 sources+="$HOME/.zsh/fzf.zsh"
 
+# rbenv specific configs
+sources+="$HOME/.zsh/rbenv.zsh"
+
 # Wealthsimple specific configs
 # sources+="$HOME/.zsh/wealthsimple.zsh"
 
