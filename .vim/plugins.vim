@@ -13,12 +13,11 @@ Plugin 'qpkorr/vim-bufkill' " bud/bd/bw without closing window plugin
 
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file/buffer/mru/tag finder for vim
 
-Plugin 'pangloss/vim-javascript' " more advanced syntax highlighting for javascript
+Plugin 'sheerun/vim-polyglot' " collectino of language packs
+
 Plugin 'mxw/vim-jsx' " JSX syntax highlighting
 
 Plugin 'tpope/vim-unimpaired' " map [q ]q, etc to quickfix related iterations (and more)
-
-Plugin 'kchmck/vim-coffee-script' " coffescript syntax highlighting
 
 Plugin 'tpope/vim-fugitive' " git wrapper for vim
 

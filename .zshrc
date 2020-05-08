@@ -35,6 +35,12 @@ sources+="$HOME/.zsh/fzf.zsh"
 # rbenv specific configs
 sources+="$HOME/.zsh/rbenv.zsh"
 
+# nvm specific configs
+sources+="$HOME/.zsh/nvm.zsh"
+
+# pyenv specific configs
+sources+="$HOME/.zsh/pyenv.zsh"
+
 # Wealthsimple specific configs
 # sources+="$HOME/.zsh/wealthsimple.zsh"
 
