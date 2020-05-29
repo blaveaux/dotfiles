@@ -26,7 +26,7 @@ set incsearch " match search while entering text
 set number
 syntax on
 
-" Custon mappings
+" Custom mappings
 source ~/.vim/mappings.vim
 
 " backspace and cursor keys wrap to previous/next line
