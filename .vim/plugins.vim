@@ -45,6 +45,7 @@ Plugin 'bling/vim-bufferline' " bufferline for airline
 
 Plugin 'tomlion/vim-solidity' " solidity syntax highlighting
 
+Plugin 'elixir-editors/vim-elixir' " general elixir support
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
