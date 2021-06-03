@@ -11,7 +11,8 @@ Plugin 'scrooloose/nerdcommenter' " comment related inserts plugin
 
 Plugin 'qpkorr/vim-bufkill' " bud/bd/bw without closing window plugin
 
-Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file/buffer/mru/tag finder for vim
+" TODO:   remove ctrlp. No longer used
+" Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file/buffer/mru/tag finder for vim
 
 Plugin 'pangloss/vim-javascript' " more advanced syntax highlighting for javascript
 Plugin 'mxw/vim-jsx' " JSX syntax highlighting

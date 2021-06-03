@@ -43,12 +43,6 @@ nnoremap <Leader>% :let @*=@%<CR>
 " map <Leader>; to replace first character of every word on current line to uppercase
 nmap <Leader>; :s/\w\+/\u&/g<CR>:let @/=""<CR>
 
-" map <Leader> to p to open CtrlP in normal (file) mode
-nnoremap <Leader>p :CtrlP<CR>
-
-" map <Leader> to p to open CtrlP in buffer mode 
-nnoremap <Leader>P :CtrlPBuffer<CR>
-
 " map <Alt-8> (• char on OSX) to set the search value to the word under the current cursor (wrapped with \< \>)
 nnoremap <A-8> :let @/="\\<" . expand("<cword>") . "\\>"<CR>
 
@@ -63,5 +57,11 @@ nnoremap <Leader>a :Ag<CR>
 " map <Leader>t to search tags
 nnoremap <Leader>t :Tag<CR>
 
-" map <Leader>b to search buffers
-nnoremap <Leader>b :Buffers<CR>
+" map <Leader>p to search buffers
+" NOTE: <Leader>b had delay due to input escape window because bufkill plugin
+" assigns a bunch of mappings on <Leader>b*
+" verified via :verbose noremap <leader>b
+nnoremap <Leader>p :Buffers<CR>
+
+" map <Leader>p to search buffers
+nnoremap <c-b> :Buffers<CR>
