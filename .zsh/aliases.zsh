@@ -24,3 +24,6 @@ alias clear!='clear && tmux clear-history'
 
 # aga to ag -all-types (ignores .ignore BUT not hidden files)
 alias aga='ag --all-types'
+
+# work around macOS provided ctags by using brew equivalent
+alias ctags="`brew --prefix`/bin/ctags"

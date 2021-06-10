@@ -28,6 +28,8 @@ zstyle ':vcs_info:git*' formats 			"%F{5}[%F{3}!!%b!!%F{5}]%F{7}"
 zstyle ':vcs_info:git*' actionformats "%F{5}[%F{3}!!%b!!%F{5}]%F{7} %F{2}(%F{4}%a%F{2})%F{7}"
 # keep up to date with staging changes (NOTE: can cause slow-down on large projects)
 zstyle ':vcs_info:*' check-for-changes true
+# disable vcs_info prompts on Yelp remote fs
+zstyle ':vcs_info:*' disable-patterns "$HOME/dev(|/*)"
 
 # prepare variables for vcs_info in precmd
 function precmd() {

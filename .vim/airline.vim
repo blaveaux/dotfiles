@@ -17,36 +17,42 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+
 "" Airline general configs
 " set airline theme
 let g:airline_theme='papercolor'
 
-" airline-tabline options
+" Function configuring section parts
+" set section c (bufferline section) of bottom bar to relative path to current file and readonly status
+function! AirlineInit()
+  let g:airline_section_c = airline#section#create(["%{expand('%:~:.')}", ' ', 'readonly'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
+
+
+"" fugitive airline branch options
+" enable showing branch name
+let g:airline#extensions#branch#enabled = 1
+
+" to truncate all path sections but the last one, e.g. a branch
+" 'foo/bar/baz' becomes 'f/b/baz', use
+let g:airline#extensions#branch#format = 2
+
+" truncate long branch names to a fixed length >
+let g:airline#extensions#branch#displayed_head_limit = 20
+
+
+"" airline-tabline options
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
 
-" show tab number beside buffer (and tabs?)
-"" let g:airline#extensions#tabline#show_tab_nr = 1
+" show list of buffers on tabline when on a single tab
+" when disabled shows same view as multi-tab view
+" NOTE: #show_tabs = 0 sets list buffer view always on
+let g:airline#extensions#tabline#show_buffers = 0
 
-let g:airline#extensions#tabline#show_buffers = 1
+" remove X 'button' on right side of tabline
+let g:airline#extensions#tabline#show_close_button = 0
 
-" display all tabs instead of "..." when more tabs than window can be displayed
-" Currently disabled 
-let g:airline#extensions#tabline#show_tabs = 1
-
-"" let g:airline#extensions#tabline#exclude_preview = 0
-
+" set airline tab formatting to short hand path except tail (filename)
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-" vim-bufferline options
-" enable bufferline
-let g:airline#extensions#bufferline#enabled = 1 
-
-let g:airline#extensions#bufferline#overwrite_variables = 1
-
-" airline-syntastic
-" let g:airline#extensions#syntastic#enabled = 1
-
-" fugitive options
-" disable showing branch name
-let g:airline#extensions#branch#enabled = 0

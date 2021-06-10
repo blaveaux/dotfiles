@@ -73,7 +73,8 @@ endif
 source ~/.vim/gui.vim
 
 "" Airline configs
-source ~/.vim/airline.vim
+" source ~/.vim/airline.vim
+let g:airline_extensions = []
 
 " config for custom FileType specific configuration
 " augroup prevents files being sourced again (like header file protector ifdefs in c++)
@@ -84,7 +85,7 @@ augroup configgroup
     autocmd BufNewFile,BufRead *.jbuilder set ft=ruby
 
     " include project tags (stored within .git/tags)
-    "set tags=./.git/tags;$HOME
+    set tags=./.git/tags;$HOME
     
     " configure the global tags path depending on the OS
     "if has('win32')
@@ -101,9 +102,10 @@ augroup configgroup
 
     " NOTE: to match specific file types, use pattern *.rb (instead of current *)
     " update project (local directory) tags on file save
-    autocmd BufWritePost * call CreateTags()
+    " TODO: re-enabled once generating local ctags is fixed
+    " autocmd BufWritePost * call CreateLocalTags()
     " update project (local directory) tags on vim startup
-    autocmd VimEnter * call CreateTags()
+    "autocmd VimEnter * call CreateLocalTags()
 
     autocmd FileType vim setlocal textwidth=0
 
