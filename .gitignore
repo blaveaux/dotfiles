@@ -22,8 +22,9 @@
 .config/nvim/*
 !.config/nvim/init.vim
 
-# blacklist vim/bundle (managed by Vundler)
+# blacklist vim package cache paths
 .vim/bundle
+.vim/plugged
 **/.DS_Store
 
 # whitelist config files

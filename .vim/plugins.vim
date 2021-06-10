@@ -1,65 +1,45 @@
-" Vundle Configs
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+" init Vim-Plug
+call plug#begin('~/.vim/plugged')
 
-" Keep Plugin commands between vundle#begin/end.
-call vundle#begin()
+Plug 'scrooloose/nerdcommenter' " comment related inserts plugin
 
-Plugin 'VundleVim/Vundle.vim' " vundle
+Plug 'qpkorr/vim-bufkill' " bud/bd/bw without closing window plugin
 
-Plugin 'scrooloose/nerdcommenter' " comment related inserts plugin
+Plug 'pangloss/vim-javascript' " more advanced syntax highlighting for javascript
 
-Plugin 'qpkorr/vim-bufkill' " bud/bd/bw without closing window plugin
+Plug 'mxw/vim-jsx' " JSX syntax highlighting
 
-" TODO:   remove ctrlp. No longer used
-" Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file/buffer/mru/tag finder for vim
+Plug 'tpope/vim-unimpaired' " map [q ]q, etc to quickfix related iterations (and more)
 
-Plugin 'sheerun/vim-polyglot' " collectino of language packs
+Plug 'kchmck/vim-coffee-script' " coffescript syntax highlighting
 
-Plugin 'mxw/vim-jsx' " JSX syntax highlighting
+Plug 'tpope/vim-fugitive' " git wrapper for vim
 
-Plugin 'tpope/vim-unimpaired' " map [q ]q, etc to quickfix related iterations (and more)
+Plug 'tpope/vim-rhubarb' " fugitive extension for web actions (ie Gbrowse)
 
-Plugin 'tpope/vim-fugitive' " git wrapper for vim
+Plug 'tpope/vim-surround' " surround selection blocks
 
-Plugin 'tpope/vim-rhubarb' " fugitive extension for web actions (ie Gbrowse)
+Plug 'rizzatti/dash.vim' " Dash API documentation lookup
 
-Plugin 'tpope/vim-surround' " surround selection blocks
+Plug 'kana/vim-textobj-user' " custom text objecs (required for vim-textobj-rubyblock plugin)
 
-Plugin 'rizzatti/dash.vim' " Dash API documentation lookup
-
-Plugin 'kana/vim-textobj-user' " custom text objecs (required for vim-textobj-rubyblock plugin)
-
-Plugin 'nelstrom/vim-textobj-rubyblock' " add ruby block selections (ir/ar)
+Plug 'nelstrom/vim-textobj-rubyblock' " add ruby block selections (ir/ar)
 
 " TODO: look to use vim-plug (as it supports using local install at `/usr/local/opt/fzf` fzf instead of cloning whole project)
-Plugin 'junegunn/fzf' " Baseline fzf plugin (still required for vim)
+Plug 'junegunn/fzf' " Baseline fzf plugin (still required for vim)
 
-Plugin 'junegunn/fzf.vim' " FZF integration plugin
+Plug 'junegunn/fzf.vim' " FZF integration plugin
+
+Plug 'tomlion/vim-solidity' " solidity syntax highlighting
+
+Plug 'elixir-editors/vim-elixir' " syntax highlighting for elixir
+
+Plug 'slashmili/alchemist.vim'
 
 " gui focused plugins
-Plugin 'bling/vim-airline' " airline for visual goodness
+Plug 'bling/vim-airline' " airline for visual goodness
 
-Plugin 'vim-airline/vim-airline-themes' " themes for airline
+Plug 'bling/vim-bufferline' " bufferline for airline
 
-Plugin 'bling/vim-bufferline' " bufferline for airline
-
-Plugin 'tomlion/vim-solidity' " solidity syntax highlighting
-
-Plugin 'elixir-editors/vim-elixir' " general elixir support
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-" TODO: Refactor Config specific logic into ~/.vim/bundle/<plugin>/after directories
+" Initialize plugin system
+call plug#end()

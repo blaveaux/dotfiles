@@ -41,11 +41,8 @@ sources+="$HOME/.zsh/nvm.zsh"
 # pyenv specific configs
 sources+="$HOME/.zsh/pyenv.zsh"
 
-# Wealthsimple specific configs
-# sources+="$HOME/.zsh/wealthsimple.zsh"
-
-# Shopify specific config
-# sources+="$HOME/.zsh/shopify.zsh"
+# Brex specific configs
+sources+="$HOME/.zsh/brex.zsh"
 
 # include all sources
 foreach file (`echo $sources`)
