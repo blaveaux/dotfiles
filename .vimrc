@@ -2,10 +2,6 @@ set nocompatible
 
 source ~/.vim/plugins.vim
 
-" due to new regex being slower for ruby syntax highlighting, using older regex
-" TODO: remove once ruby syntax file has been updated to be more efficient with new regex
-set re=1
-
 " vim-textobj-rubyblock settings
 runtime macros/matchit.vim " required for plugin (NOTE: still works when disabled, not sure why)
 
